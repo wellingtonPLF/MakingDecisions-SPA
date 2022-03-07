@@ -1,0 +1,10 @@
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center">
+  <h1>Make Your Decision</h1>
+  <div *ngIf="token == null || token == undefined " style="display: flex; justify-content: space-around; width: 200px">
+    <button mat-button  [routerLink]="['/login']" id="signIn">Sign in</button>
+    <button mat-button  [routerLink]="['/cadastro']" id="signUp">Sign up</button>
+  </div>
+  <button mat-button *ngIf="token != null || token != undefined " (click)="removeToken()"
+          style="background-color: #ea1212; color: white; width: 200px">Sign Out</button>
+  <app-usuario [tokenId]="token"></app-usuario>
+</div>

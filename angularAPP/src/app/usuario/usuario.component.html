@@ -1,0 +1,29 @@
+<div id="mainLayout">
+  <app-upload-image [usuario]="usuario"></app-upload-image>
+  <div id="userName">
+    <div *ngIf="usuario != undefined; else noUser" style="background-color: #2b2114;">{{usuario.name}}</div>
+    <div style="margin-top: 7px;">
+      <a *ngIf="tokenId != undefined" href="/react">edit</a>
+    </div>
+    <ng-template #noUser>
+        <div style="background-color: #2b2114;">.&nbsp;&nbsp;.&nbsp;&nbsp;.</div>
+    </ng-template>
+  </div>
+
+  <div id="decisoes" style="overflow-y:scroll">
+    <div id="noDecision">
+      <div>Decisions</div>
+    </div>
+    <div *ngIf="decisoes != undefined;">
+      <div *ngFor="let decisao of decisoes; let i = index" class="decisao">
+        <div>
+          <b>-</b>&nbsp;&nbsp;&nbsp;
+          <input (keyup)="saveEdit($event, i)" spellcheck="false" size="30" [value]="decisao.name">
+        </div>
+        <div (click)="removerDecisao(i)" style="margin-right: 10px; cursor: pointer">x</div>
+      </div>
+    </div>
+    <button *ngIf="usuario != undefined;" (click)="addDecisao()"
+            style="margin-left: 10px; margin-top: 10px; width: 94%;">+</button>
+  </div>
+</div>

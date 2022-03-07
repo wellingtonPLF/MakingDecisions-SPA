@@ -1,0 +1,15 @@
+<div id="login">
+  <h1>Login</h1>
+  <div>
+    <div>Username: </div>
+    <input [(ngModel)]="usuario.name" size="30">
+  </div>
+  <div style="margin-top: 5px">
+    <div>Password: </div>
+    <input type="password" [(ngModel)]="usuario.password" size="30" autocomplete="new-password">
+  </div>
+  <div style="margin-top: 10px;width: 250px; display: flex; justify-content: flex-end">
+    <button (click)="validarUsuario()">Confirmar</button>
+    <button style="margin-left: 10px; margin-right: 2px" [routerLink]="['']">Cancelar</button>
+  </div>
+</div>
