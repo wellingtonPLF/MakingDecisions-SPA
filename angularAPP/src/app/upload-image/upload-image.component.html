@@ -1,9 +1,7 @@
 <input type="file" (change)="onFileSelected($event)" style="display: none" #pickFile>
+
 <div *ngIf="usuario != undefined; else noUser" (click)="pickFile.click()" class="imagemUser">+</div>
+
 <ng-template #noUser>
   <div class="imagemUser">+</div>
 </ng-template>
-
-
-
-
