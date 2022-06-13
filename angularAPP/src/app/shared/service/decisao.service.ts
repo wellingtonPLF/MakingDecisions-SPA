@@ -8,7 +8,8 @@ import {Decision} from "../models/Decision";
 })
 export class DecisaoService {
 
-  URL_DECISAO = 'http://localhost:8088/decisions/';
+  // URL_DECISAO = 'http://localhost:8088/decisions/';
+  URL_DECISAO = 'https://decision-pd-service.herokuapp.com/decisions/';
 
   constructor(private httpClient: HttpClient) {
   }

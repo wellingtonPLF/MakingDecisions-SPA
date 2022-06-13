@@ -9,7 +9,8 @@ import {Usuario} from "../models/Usuario";
 })
 export class UsuarioService {
 
-  URL_USUARIO = 'http://localhost:8088/users/';
+  // URL_USUARIO = 'http://localhost:8088/users/';
+  URL_USUARIO = 'https://auth-pd-service.herokuapp.com/users/';
 
   constructor(private httpClient: HttpClient) {
   }

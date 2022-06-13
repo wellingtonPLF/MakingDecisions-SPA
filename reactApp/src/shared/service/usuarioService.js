@@ -3,7 +3,8 @@ import axios from "axios";
 class UsuarioService{
 
     constructor() {
-        this.api = axios.create({ baseURL: 'http://localhost:8081/users'})
+        //this.api = axios.create({ baseURL: 'http://localhost:8081/users'})
+        this.api = axios.create({ baseURL: 'https://auth-pd-service.herokuapp.com/users/'})
     }
 
     async listar(){
